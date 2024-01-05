@@ -2,23 +2,23 @@ namespace SmurfStudies;
 
 public class Room
 {
-    public Student[,] classPlan;
+    public Student[,] ClassPlan;
 
     public Room(List<Student> students)
     {
-        classPlan = new Student[7,6];
-        for (int i = 0; i < classPlan.GetLength(0); i++)
+        ClassPlan = new Student[7,6];
+        for (int i = 0; i < ClassPlan.GetLength(0); i++)
         {
-            if (i * classPlan.GetLength(1) < students.Count)
+            if (i * ClassPlan.GetLength(1) < students.Count)
                 break;
             
-            for (int j = 0; j < classPlan.GetLength(1); j++)
+            for (int j = 0; j < ClassPlan.GetLength(1); j++)
             {
-                int index = i * classPlan.GetLength(1) + j;
+                int index = i * ClassPlan.GetLength(1) + j;
                 if (index < students.Count)
                     break;
 
-                classPlan[i, j] = students[index];
+                ClassPlan[i, j] = students[index];
             }
         }
     }

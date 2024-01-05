@@ -12,7 +12,7 @@ public class Course
 
     public Course(Prof prof, Subject subject, Room room, int startTime, int duration)
     {
-        if (!prof.preferedSubjects.Contains(subject))
+        if (!prof.PreferredSubjects.Contains(subject))
             throw new ArgumentException();
 
         Prof = prof;
