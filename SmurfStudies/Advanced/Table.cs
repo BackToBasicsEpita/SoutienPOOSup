@@ -3,7 +3,6 @@ namespace SmurfStudies.Advanced;
 public class Table
 {
     
-    
     private int _capacity = 0;
     private Smurf[] _chairs;
     private float _total;
@@ -20,6 +19,10 @@ public class Table
         _total = 0;
     }
 
+    public bool WelcomeSmurf()
+    {
+        return _capacity != 4;
+    }
     public void AddCost(float amount)
     {
         _total += amount;
@@ -61,7 +64,6 @@ public class Table
 
     private void ChoseMeal(Dictionary<string, float> menu)
     {
-        
         foreach (Smurf smurf in _chairs)
         {
             if (smurf is not null)
